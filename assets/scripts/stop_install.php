@@ -13,7 +13,7 @@
     $infos = array();
 
     foreach ($infos_file as $info) {
-        $info = explode(":", $info);
+        $info = explode("@", $info);
         $infos[$info[0]] = $info[1];
     }
 
@@ -33,9 +33,9 @@
 
     foreach ($infos as $key => $value) {
         if ($key == "step") {
-            $infos_file .= $key . ":" . $value;
+            $infos_file .= $key . "@" . $value;
         } else {
-            $infos_file .= $key . ":" . $value . "|";
+            $infos_file .= $key . "@" . $value . "|";
         }
     }
 

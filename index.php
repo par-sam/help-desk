@@ -9,7 +9,7 @@
     $infos = array();
 
     foreach ($infos_file as $info) {
-        $info = explode(":", $info);
+        $info = explode("@", $info);
         $infos[$info[0]] = $info[1];
     }
 

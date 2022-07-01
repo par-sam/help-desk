@@ -5,7 +5,7 @@
         $infos_file = explode("|", file_get_contents("../assets/scripts/infos"));
     
         foreach ($infos_file as $info) {
-            $info = explode(":", $info);
+            $info = explode("@", $info);
             $infos[$info[0]] = $info[1];
         }
 
