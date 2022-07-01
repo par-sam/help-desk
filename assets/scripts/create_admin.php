@@ -86,7 +86,11 @@
     $infos_file = "";
 
     foreach ($infos as $key => $value) {
-        $infos_file .= $key . ":" . $value . "|";
+        if ($key == "step") {
+            $infos_file .= $key . ":" . $value;
+        } else {
+            $infos_file .= $key . ":" . $value . "|";
+        }
     }
 
     file_put_contents("infos", $infos_file);

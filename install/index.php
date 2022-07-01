@@ -76,6 +76,10 @@
                 </div>
             </div>
 <?php
+            break;
+        case 4:
+            header("Location: ..");
+            exit;
     }
     
 ?>

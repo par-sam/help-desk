@@ -134,3 +134,21 @@ if (document.getElementById("admin_create")) {
         })
     })
 }
+
+if (document.getElementById("start_btn")) {
+    document.getElementById("start_btn").addEventListener("click", function() {
+        $.ajax({
+            url: "../assets/scripts/stop_install.php",
+            method: "POST"
+        }).done(function (response) {
+            if (response == "success") {
+                window.location.reload()
+            } else {
+                notifyError("Erreur lors du démarrage", "Une erreur est survenue lors du démarrage du site", 3)
+                console.log(response)
+            }
+        }).fail(function () {
+            notifyError("Erreur", "Une erreur est survenue lors du démarrage, veuillez réessayer", 3)
+        })
+    })
+}
