@@ -1,4 +1,5 @@
-# Help Desk
+# Help Desk (Work in progress ⚠️)
+### Do not install, for the moment there is nothing.
 
 ## What is it?
 
