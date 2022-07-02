@@ -1,0 +1,18 @@
+body {
+    background: #161616;
+}
+
+#main_body {
+    background-image: url("../images/openspace.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+nav {
+    background-color: #222222;
+}
+
+#help_cats {
+    background-color: #161616;
+}

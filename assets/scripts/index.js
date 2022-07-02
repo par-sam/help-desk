@@ -115,6 +115,8 @@ if (document.getElementById("admin_create")) {
                 }, 1000)
             } else if (response == "username_exists") {
                 notifyWarning("Nom d'utilisateur existant", "Ce nom d'utilisateur est déja utilisée", 3)
+            } else if (response == "fields_required") {
+                notifyWarning("Champs manquants", "Veuillez remplir tous les champs", 3)
             } else if (response == "pass_not_match") {
                 notifyWarning("Mot de passe non identique", "Les mots de passe ne correspondent pas", 3)
             } else if (response == "pass_too_short") {

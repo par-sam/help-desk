@@ -29,13 +29,6 @@
         exit;
     }
 
-    $password_list = explode("\n", file_get_contents("https://raw.githubusercontent.com/duyet/bruteforce-database/master/1000000-password-seclists.txt"));
-
-    if ($password == $username || $password == $mail || array_search($password, $password_list)) {
-        echo "pass_not_secure";
-        exit;
-    }
-
     if (strlen($password) < 8) {
         echo "pass_too_short";
         exit;
@@ -65,12 +58,13 @@
         exit;
     }
 
-    $stmt = $pdo->prepare("INSERT INTO `users` (`username`, `mail`, `password`, `token`, `ranks`) VALUES (:username, :mail, :password, :token, '[]');");
+    $stmt = $pdo->prepare("INSERT INTO `users` (`username`, `mail`, `password`, `token`, `ranks`) VALUES (:username, :mail, :password, :token, :admin);");
     $stmt->execute([
         "username" => $username,
         "mail" => $mail,
         "password" => $password,
-        "token" => bin2hex(random_bytes(32))
+        "token" => bin2hex(random_bytes(32)),
+        "admin" => "[\"admin\"]"
     ]);
 
     $infos_file = explode("|", file_get_contents("infos"));

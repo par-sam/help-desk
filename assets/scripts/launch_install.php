@@ -50,7 +50,7 @@
     ]);
 
     $file = fopen("infos", "w");
-    fwrite($file, "version@$latest|installation_date@$date|db@true|step@2");
+    fwrite($file, "version@$latest|installation_date@$date|step@2");
     fclose($file);
 
     echo "success";

@@ -23,8 +23,9 @@
     <title>Help Desk - Installation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../assets/scripts/jquery.js"></script>
+    <link rel="stylesheet" href="../assets/scripts/styles.css">
 </head>
-<body style="background-color: #161616;" class="text-white">
+<body class="text-white">
     <h1 class="absolute text-3xl m-2">Help Desk - Installation</h1>
 
     <div id="notification" class="flex text-black absolute bottom-0 right-0 bg-white rounded-md p-2 m-4 hidden">
