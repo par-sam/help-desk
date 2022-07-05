@@ -1,5 +1,9 @@
 <?php
-    include "../../configuration.php";
+    $host = "MYSQL IP ADDRESS";
+    $user = "MYSQL USER";
+    $pass = "MYSQL PASSWORD";
+    $db = "MYSQL DATABASE";
+    $port = 3306;
 
     $charset = 'utf8';
 
